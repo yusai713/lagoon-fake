@@ -1,0 +1,18 @@
+.f-navi {
+  position: absolute;
+  left: 0px;
+  @include mq-sp {
+    position: initial;
+  }
+  ul {
+    overflow: hidden;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
+  a {
+    color: $f-color;
+    @include navHover;
+  }
+}

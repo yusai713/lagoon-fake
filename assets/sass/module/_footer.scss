@@ -1,0 +1,30 @@
+footer {
+  width: 100%;
+  color: $f-color;
+  @include mq-sp {
+    padding: 15px 0 0;
+  }
+  .footer-inner {
+    max-width: $pc-size;
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    position: relative;
+    @include flex;
+    @include mq-sp {
+      display: block;
+      text-align: center;
+    }
+    small {
+      position: absolute;
+      right: 0;
+      color: $f-color;
+      @include mq {
+        right: 10px;
+      }
+      @include mq-sp {
+        position: initial;
+      }
+    }
+  }
+}

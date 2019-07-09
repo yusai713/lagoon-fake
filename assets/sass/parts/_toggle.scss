@@ -1,0 +1,160 @@
+/* ========================
+* Navigation Circle BG
+* ======================== */
+.nav-toggle_circle {
+  position: fixed;
+  background: linear-gradient(#05fbff, #1e00ff);
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  right: -600px;
+  margin-top: -300px;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  transition-delay: 0.1s;
+  box-shadow: 0 0 8px grey;
+  @include mq-sp {
+    border-radius: unset;
+    width: 500px;
+    height: 500px;
+  }
+}
+.open .nav-toggle_circle {
+  transform: matrix(2.7, 0, 0, 2.7, 0, 0);
+  transition-delay: 0s;
+  @include mq-sp {
+    border-radius: unset;
+    width: 500px;
+    height: 500px;
+  }
+}
+
+/* ========================
+* Navigation
+* ======================== */
+.g-navi_sp {
+  position: fixed;
+  font-size: 25px;
+  height: 100%;
+  width: 500px;
+  top: 0;
+  right: -500px;
+  display: flex;
+  align-items: center;
+  @include mq-sp {
+    width: 390px;
+  }
+  ul {
+    width: 100%;
+    list-style: none;
+  }
+  img {
+    width: 65px;
+  }
+}
+
+/* ========================
+* Navigation Animation
+* ======================== */
+.open .g-navi_sp li {
+  transition: transform 0.5s ease;
+  transition-delay: 0;
+  transform: translateX(-400px);
+  &:nth-child(1) {
+    transition-delay: 0.3s;
+  }
+  &:nth-child(2) {
+    transition-delay: 0.4s;
+  }
+  &:nth-child(3) {
+    transition-delay: 0.5s;
+  }
+  &:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+  &:nth-child(5) {
+    transition-delay: 0.7s;
+  }
+  &:nth-child(6) {
+    transition-delay: 0.8s;
+  }
+}
+
+/* ========================
+* Navigation Contents
+* ======================== */
+.g-navi_sp a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 10px 10px 0;
+
+  &:after {
+    content: "";
+    display: block;
+    background: #fff;
+    width: 0;
+    height: 1px;
+    transition: width 1s ease;
+  }
+  &:hover:after {
+    width: 100%;
+  }
+}
+
+.navi-sns {
+  display: flex;
+}
+
+/* ========================
+* nav-toggle
+* ======================== */
+.nav-toggle {
+  position: none;
+  @include mq {
+    position: absolute;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    padding: 14px 13px 0;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10000;
+  }
+}
+.nav-toggle > div {
+  position: relative;
+}
+.nav-toggle span {
+  width: 100%;
+  height: 3px;
+  left: 0;
+  display: block;
+  background: $f-color;
+  position: absolute;
+  transition: 0.35s ease-in-out;
+}
+
+.nav-toggle span:nth-child(1) {
+  top: 0;
+}
+.nav-toggle span:nth-child(2) {
+  top: 7px;
+}
+.nav-toggle span:nth-child(3) {
+  top: 14px;
+}
+
+.open .nav-toggle span:nth-child(1) {
+  top: 7px;
+  transform: rotate(45deg);
+}
+.open .nav-toggle span:nth-child(2) {
+  width: 0;
+  left: 50%;
+}
+.open .nav-toggle span:nth-child(3) {
+  top: 7px;
+  transform: rotate(-45deg);
+}

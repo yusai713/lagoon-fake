@@ -1,0 +1,20 @@
+.g-navi {
+  position: absolute;
+  right: 0px;
+  @include mq {
+    right: 10px;
+  }
+  ul {
+    overflow: hidden;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+    }
+    a {
+      color: white;
+      @include navHover;
+    }
+  }
+}
+
+@import "../parts/toggle";

@@ -1,0 +1,50 @@
+@mixin h-font($fsize) {
+  font-size: $fsize;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-top {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+@mixin section-box {
+  max-width: $pc-size;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@mixin section-bg($bg-color, $f-color) {
+  background: $bg-color;
+  color: $f-color;
+}
+
+@mixin ttl-text($line-color) {
+  text-align: center;
+  font-size: 22px;
+  @include mq-sp {
+    font-size: 4vw;
+  }
+  &:after {
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto 60px;
+    content: "";
+    background: $line-color;
+    @include mq-sp {
+      width: 10vw;
+      margin: 5% auto 10%;
+    }
+  }
+}
+
+@import "animation";

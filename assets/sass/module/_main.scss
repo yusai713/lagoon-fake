@@ -1,0 +1,146 @@
+section {
+  padding: 100px 0 135px;
+  @include mq-sp {
+    padding: 15% 0 18%;
+  }
+  .section-inner {
+    @include section-box;
+
+    .inner-box-2 {
+      @include flex-top;
+      @include mq-sp {
+        display: block;
+        margin-bottom: 0;
+      }
+      .inner-box2 {
+        margin: 0 2% 60px;
+        width: 46%;
+        background: #fff;
+        border-radius: 5%;
+        @include mq-sp {
+          margin: 0 auto 15%;
+          max-width: 640px;
+          width: 100%;
+        }
+        h3 {
+          background: #585656;
+          color: white;
+          margin-bottom: 0;
+          font-size: 25px;
+          padding: 10px 0px;
+          @include mq {
+            font-size: 22px;
+          }
+          @include mq-sp {
+            font-size: 4vw;
+            padding: 2% 0;
+          }
+        }
+        img {
+          height: 250px;
+          object-fit: cover;
+          @include mq-sp {
+            max-height: 400px;
+            height: auto;
+          }
+        }
+        p {
+          padding: 10px 10px 25px;
+          color: #585656;
+        }
+      }
+      .inner-box_last {
+        @include mq-sp {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .inner-box-3 {
+    @include flex-top;
+    @include mq-sp {
+      display: block;
+    }
+    .inner-box3 {
+      margin: 0 2% 60px;
+      width: 29.333%;
+      @include mq {
+        width: 46%;
+      }
+      @include mq-sp {
+        width: 70%;
+        margin: 0 auto 15%;
+      }
+      p {
+        padding: 20px 20px;
+        background: #fff;
+        color: $f-color;
+        border-radius: 5px;
+        min-height: 392px;
+        @include mq {
+          min-height: 280px;
+        }
+        @include mq-sp {
+          min-height: unset;
+        }
+      }
+    }
+    .inner-box_last {
+      @include mq {
+        margin: 0 auto 60px;
+      }
+      @include mq-sp {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# section-bgcolor
+--------------------------------------------------------------*/
+.bg-pink {
+  @include section-bg($bg-pink, #fff);
+}
+.bg-yellow {
+  @include section-bg($bg-yellow, #fff);
+  padding-bottom: 75px;
+}
+.bg-green {
+  @include section-bg($bg-green, #fff);
+  padding-bottom: 75px;
+}
+.bg-blue {
+  @include section-bg($bg-blue, #fff);
+}
+.ttl-text1 {
+  @include ttl-text(#fff);
+}
+
+/*--------------------------------------------------------------
+# about
+--------------------------------------------------------------*/
+.about-h3 {
+  background: #fff;
+  color: #ec6f71;
+  border-radius: 50px;
+  padding: 20px 0;
+  margin-bottom: 50px;
+  @include mq-sp {
+    font-size: 4vw;
+  }
+}
+
+/*--------------------------------------------------------------
+# event
+--------------------------------------------------------------*/
+.event-border {
+  border: 3px solid;
+  background: #fff;
+  padding: 60px 2% 0;
+  @include mq-sp {
+    text-align: center;
+    padding: 5% 2%;
+  }
+}

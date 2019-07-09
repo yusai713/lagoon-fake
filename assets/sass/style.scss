@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/*--------------------------------------------------------------
+# 外部ファイル
+--------------------------------------------------------------*/
+@import "mixin/mixin";
+@import "variables/color";
+@import "setting/config";
+
+@import "base/base";
+@import "module/header";
+@import "module/gnav";
+@import "module/main";
+@import "module/mainvisual";
+@import "module/fnav";
+@import "module/footer";

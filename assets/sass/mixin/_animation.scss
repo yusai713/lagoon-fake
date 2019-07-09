@@ -1,0 +1,59 @@
+@mixin navHover {
+  position: relative;
+  display: inline-block;
+  &:before {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(
+      to right,
+      dodgerblue,
+      crimson,
+      yellowgreen,
+      orange,
+      purple,
+      red
+    );
+    transition: 0.2s;
+  }
+  &:hover:before {
+    width: 100%;
+  }
+}
+
+@mixin bound {
+  animation: bound 1s linear infinite;
+}
+@keyframes bound {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*--------------------------------------------------------------
+# Delighters
+--------------------------------------------------------------*/
+/* 基本のスタイル */
+.foo.delighter {
+  transition: all 0.5s ease-out;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+/* スタート時のスタイル */
+.foo.delighter.started {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* エンド時のスタイル */
+.foo.delighter.started.ended {
+  border: 10px solid black;
+}
